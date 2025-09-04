@@ -10,4 +10,10 @@ Incluye las siguientes páginas:
 - Aviso legal
 - Política de cookies
 
+## Funcionalidades
+
+- Navegación entre las páginas existentes
+- Página principal responsive para móvil
+- Cambio de color de fondo
+
 
