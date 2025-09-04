@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+:root {
+    --color_seccion: #bee3f1;
+    --color_fondo: #126a89;
+    --margen_vertical: 2vh;
+    --margen_horizontal: 2vw;
+    --altura_seccion: 78vh;
+    --color_secundario: #f3d111;
+    --color_negro: #000000;
+    --color_blanco: #ffffff;
+    --altura_menu: 74vh;
+    --anchura_menu: 10vw;
+}
+
+@font-face {
+    font-family: "Knewave";
+    src: url(../recursos/tipos/Knewave-Regular.ttf);
+}
+
+a:not(.titulo) {
+    color: inherit;
+    text-decoration: underline dotted;
+}
+
+a:hover {
+    color: var(--color_fondo);
+    cursor: pointer;
+}
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+    font-size: medium;
+    /* overflow-y: hidden; */
+}
+
+.grid_index {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+}
+
+.titulo {
+    text-decoration: none;
+    transition: 0.5s !important;
+    font-size: 200%;
+    color: var(--color_negro);
+}
+
+h2 {
+    font-family: "Knewave";
+    font-size: 200% !important;
+    font-weight: 400;
+}
+
+.cap {
+    font-variant: small-caps;
+}
+
+
+.titulo:hover {
+    font-size: 250%;
+    color: var(--color_fondo);
+}
+
+.seccion {
+
+    padding: 2%;
+    margin: var(--margen_vertical) var(--margen_horizontal);
+    border-radius: 5px;
+}
+
+.seccion_01 {
+    flex-direction: column;
+    height: var(--altura_seccion);
+    width: auto;
+    justify-items: center;
+}
+
+.seccion_01_foto {
+    background-color: var(--color_fondo);
+    border-radius: 50%;
+    height: 40vh;
+    width: 40vh;
+    margin-top: 4vh;
+}
+
+
+ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tarjeta {
+    text-align: center;
+    align-content: center;
+    height: 34vh;
+}
+
+.seccion_02 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+
+.icono {
+    padding-right: 3%;
+    vertical-align: middle;
+}
+
+/*CONTACTO*/
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid_contacto {
+    display: grid;
+    grid-template-columns: auto 1fr 2fr;
+}
+
+input::placeholder,
+select::placeholder,
+textarea::placeholder {
+    color: black;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input,
+select,
+textarea {
+    border-radius: 4px;
+    border: black solid 2px;
+    padding: 10px;
+}
+
+button {
+    display: inline-block;
+    background-color: var(--color_blanco);
+    border: none;
+    border-radius: 20px !important;
+    color: var(--color_negro);
+    padding: 10px 25px;
+    cursor: pointer;
+    margin-top: 10px !important;
+}
+
+button[type="submit"] {
+    background-color: var(--color_fondo);
+    color: var(--color_blanco);
+    margin-top: 2%;
+    border-radius: 5px;
+
+}
+
+button[type="submit"]:hover {
+    background-color: var(--color_blanco);
+    color: var(--color_fondo);
+}
+
+/*NAVEGACION*/
+.menu {
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+    width: fit-content;
+    color: var(--color_blanco);
+    height: var(--altura_menu);
+
+}
+
+.menu ul li {
+    text-decoration: none;
+    color: var(--color_fondo);
+    padding: 20px;
+    justify-self: center;
+}
+
+.menu a {
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.menu a:hover {
+    background-color: var(--color_fondo);
+    color: var(--color_seccion);
+}
+
+
+
+.activo {
+    background-color: var(--color_fondo);
+    color: var(--color_seccion) !important;
+}
+
+
+/*HEADER*/
+header {
+    margin: 0 !important;
+    grid-column: 1/4;
+    background-color: var(--color_negro);
+    color: var(--color_blanco);
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
+}
+
+.margen_header {
+    margin-top: 110px !important;
+    position: relative;
+}
+
+
+/*FOOTER*/
+footer {
+    height: 5vh;
+    padding: 1px 10px;
+    position: fixed;
+    bottom: 0vh;
+    width: 100vw;
+    background-color: var(--color_negro);
+    color: white;
+    grid-column: 1/4;
+    font-size: small;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.espacio0 {
+    margin: 0;
+    padding: 0;
+    display: inline;
+    padding: 0 10px;
+}
+
+/*MODO BLANCO Y NEGRO*/
+.bg_color {
+    background-color: var(--color_fondo) !important;
+}
+
+.bg_byn {
+    background-color: var(--color_blanco) !important;
+}
+
+.seccion_color {
+    background-color: var(--color_seccion);
+}
+
+.seccion_byn {
+    background-color: var(--color_negro) !important;
+    color: var(--color_blanco) !important;
+}
+
+/*MÓVIL*/
+@media only screen and (max-width: 800px) {
+    .grid_index {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .seccion {
+        height: fit-content;
+    }
+
+    .seccion_02 {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .tarjeta {
+        width: var(--altura_seccion);
+        height: var(--altura_seccion);
+    }
+
+    .row {
+        display: grid !important;
+        grid-template-columns: 3fr 1fr !important;
+        align-items: center;
+    }
+
+    #btn_div {
+        display: block;
+        color: red;
+        margin: 20px 0;
+        align-self: center;
+
+    }
+
+    #seccion_01 {
+        margin-top: 250px;
+
+    }
+}
+
+/*DISEÑOS*/
+.disenos {
+    background-color: var(--color_seccion);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    width: 100%;
+    margin-top: 120px !important;
+}
+
+
+
+.contenedor-galeria {
+    display: grid;
+    place-items: center;
+   
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    max-width: 400px;
+}
+
+.contenedor-imagen {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 400px;
+    border-radius: 5px;
+    height: 400px;
+    overflow: hidden;
+    background-color: #efefef;
+    transition: 0.4s ease-in-out;
+    box-shadow: 0 5px 12px rgb(0, 0, 0, 0.5);
+    flex: 0.25;
+}
+
+.contenedor-imagen img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.contenedor-imagen:hover {
+    flex: 15;
+    cursor: pointer;
+    border-radius: 8px;
+    justify-items: center;
+}
