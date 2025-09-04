@@ -14,6 +14,6 @@ Incluye las siguientes páginas:
 
 - Navegación entre las páginas existentes
 - Página principal responsive para móvil
-- Cambio de color de fondo
+- Cambio de color de fondo en la página principal
 
 
