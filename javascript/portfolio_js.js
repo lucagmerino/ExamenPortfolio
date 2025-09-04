@@ -11,10 +11,12 @@ function cambioColor(){
         body.classList.remove("bg_color");
         body.classList.add("bg_byn");
         
-       
-        seccion.classList.remove("seccion_color");
-        seccion.classList.add("seccion_byn");
+      /*  for (let i = 0; i < seccion.length; i++) {
+            seccion[i].classList.remove("seccion_color");
+            seccion[i].classList.add("seccion_byn");
+        }
 
+ */
         
 
        
@@ -26,8 +28,7 @@ function cambioColor(){
         
        
         
-        seccion.classList.remove("seccion_byn");
-        seccion.classList.add("seccion_color");
+        
 
         modo_byn=false;
     }
